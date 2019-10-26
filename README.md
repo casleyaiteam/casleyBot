@@ -1,9 +1,6 @@
-# casleyBot
-chatbot of casley AIteam 
+## Name casley AIchat Bot(仮) 
 
-Name casley AIchat Bot(仮) 
-
-Overview
+## Overview
 キャスレー人事ハンドブックをチャットボット化！
 ## Description
 Lineメッセージから適切なハンドブックのテキスト or pdfを返す
@@ -19,8 +16,5 @@ Lineメッセージから適切なハンドブックのテキスト or pdfを返
 
 ## Licence
 
-[MIT](https://github.com/tcnksm/tool/blob/master/LICENCE)
-
 ## Author
-
-[tcnksm](https://github.com/tcnksm)
+casley AIteam 
