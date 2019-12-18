@@ -18,4 +18,4 @@ app.intent('CasleyChatBotIntents', async (conv, params) => {
 });
 
 const REGION = 'asia-northeast1';
-exports.helloWorld = functions.region(REGION).https.onRequest(app);
+exports.reply = functions.region(REGION).https.onRequest(app);
