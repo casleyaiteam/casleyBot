@@ -20,6 +20,8 @@ const SimpleReplyService = class {
             let ansData = '';
             this.replyStream
             .on('data', d => {
+                // 一度に行単位ではなく全量取ってきているみたい
+                // 改行コードで分割しているが、これだとリプライの一部として改行を使えない
                 let filtered = String(d)
                     .replace(/"/g, '')
                     .split('\n')

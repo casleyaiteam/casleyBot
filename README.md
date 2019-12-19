@@ -30,12 +30,24 @@ OS等により方法が色々あるようなので以下からお好きな方法
 https://firebase.google.com/docs/cli?hl=ja
 
 ### ログイン
-`firebase login`
+```
+firebase login
+```
 
 ### プロジェクトの初期化
-`firebase init`
+```
+firebase init
+```
 
 選択肢が出るので `Functions` , `JavaScript` を選ぶ。
 
+### 認証情報の設定
+GCPコンソールのストレージに、<br>
+functionsからstorage内のファイルを読み込むための認証情報のJSONファイルが置いてあります。<br>
+`casley-chat-bot-bucket1/chatbot_application_credentials.json` <br>
+これをダウンロードしてcloneしてきたソースコードのfunctions/.private/以下に配置する。
+
 ### デプロイ
-`firebase deploy --only functions`
+```
+firebase deploy --only functions
+```
