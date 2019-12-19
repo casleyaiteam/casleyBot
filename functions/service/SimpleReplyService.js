@@ -21,12 +21,13 @@ const SimpleReplyService = class {
             this.replyStream
             .on('data', d => {
                 // 一度に行単位ではなく全量取ってきているみたい
-                // 改行コードで分割しているが、これだとリプライの一部として改行を使えない
+                // 改行コードで行を分割しているため、リプライの一部として改行を使う場合は{LF}を使用してほしい
                 let filtered = String(d)
                     .replace(/"/g, '')
                     .split('\n')
                     .filter(line => line.split(',')[0] === questionWord);
-                ansData = filtered.length > 0 ? filtered[0] : '';
+                ansData = filtered.length > 0 ?
+                    filtered[0].replace(/{LF}/g, '\n') : '';
             })
             .on('end', () => {
                 resolve(ansData);
